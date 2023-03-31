@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+*{ padding: 0; margin: 0; box-sizing: border-box;}
+body { background: #031b2b; display: flex; align-items: center; justify-content: center; font-family: 'Roboto', sans-serif; margin: 0 16px;}
+.main { background: #fff; padding: 20px; border-radius: 10px; margin-top: 10rem; max-width: 500px; width: 100%;}
+.main .title { text-align: center; padding: 12px 0 8px 0; }
+.main .add-todo-form { width: 100%; }
+.main .add-todo-form .add-input-container { width: 100%; display:flex ; align-items: center; }
+.main .add-todo-form .add-input-container .my-input { width: 100%; padding: 9px 15px; margin-right: 10px; border-radius: 7px; font-size: 24px; }
+.main .add-todo-form .add-input-container .add-todo-btn {all: unset; cursor: pointer; text-align:center; font-size: 30px; padding: 7px 10px; width: 30px; font-weight: bold; border-radius: 7px; background: #031b2b; color: #fff; }
+
+.main .todo-group { margin: 12px 0 40px 0; }
+.main .todo-group > li { list-style: none; padding: 8px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; margin-bottom: 4px; border: 1px solid #dfdfdf;}
+.main .todo-group > li > div { display: flex; align-items: center; justify-content: space-between; }
+.main .todo-group > li .check-title { display: flex; align-items: center;}
+.main .todo-group > li .check-title .check-class { margin-right: 8px; width: 15px; height: 15px; }
+.main .todo-group > li > div .delete-btn { padding: 2px 6px; cursor: pointer; }
+.main .todo-group > li > div .edit-btn { padding: 2px 8px; margin-right: 6px; cursor: pointer; }
+.main .btn-r-checked { all: unset; background: #031b2b; color: #fff; padding: 10px; border-radius: 5px; color: #d6d6d6; cursor: pointer;}
+
+.progress-bar-container { border: 1px solid #d6d6d6; border-radius: 6px; width: 50%;}
+.progress-bar { background: rgb(106, 178, 106); border-radius: 6px; padding: 4px 0 4px 8px; white-space: nowrap;}
+.main .modal { height: 100vh; width: 100%; position: fixed; display: flex; align-items: center; justify-content: center; top:0; left:0; background: rgba(0, 0, 0, 0.304);}
+.main .modal .edit-todo-form { width: 100%; max-width: 400px; width: 100%; background: #fff; padding: 20px; border-radius: 5px; }
+.main .modal .edit-todo-form .save-todo-cta { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; }
+.main .modal .edit-todo-form .save-todo-cta > button { all: unset; border:1px solid; width: 70px; text-align: center; padding: 5px 2px; border-radius: 5px; cursor: pointer;}
+.main .modal .edit-todo-form .save-todo-cta > button:nth-of-type(2) { background: rgb(242, 191, 191);  }
+.main .edit-todo-form .edit-input-container .my-input { width: 100%; padding: 4px 18px; margin-right: 10px; border-radius: 7px; font-size: 20px; }
+.line-through { text-decoration: line-through;}
+
+footer { display: flex; align-items: center; justify-content: space-between;}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    footer { flex-direction: column;}
+    .progress-bar-container { width: 100%; margin-bottom: 10px;}
+    .main .btn-r-checked { width: 100%; text-align: center; padding: 10px 0;}
+    .main .title { font-size: 18px; }
+
+}
